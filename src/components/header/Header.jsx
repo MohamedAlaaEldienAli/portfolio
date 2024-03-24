@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './header.css';
 const Header = () => {
     return (
@@ -19,6 +19,10 @@ const Header = () => {
             <button>
                 ligth
             </button>
+
+            <div className="border fixed">
+
+            </div>
             
         </header>
     );

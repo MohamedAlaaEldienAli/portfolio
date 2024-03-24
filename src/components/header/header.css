@@ -43,6 +43,15 @@ header .menu {
     display: none;
 }
 
+/* start pop up */
+
+header .fixed{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(40, 40, 48, 0.884);
+}
+/* end pop up */
+
 
 @media(max-width:700px){
     header.flex nav{
