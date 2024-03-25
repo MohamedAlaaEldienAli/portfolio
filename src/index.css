@@ -6,8 +6,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+button{
+  all:unset
+}
 :root{
-  --primary-background : #05091b;
+  --primary-background : #020308;
   --secondary-background : #18181b;
   --boredr: rgba(63,63,70,0.5);
   --title:rgb(244 244 245);
