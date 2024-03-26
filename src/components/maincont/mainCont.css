@@ -1,0 +1,154 @@
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(10 ,1fr);
+    
+    
+    
+}
+.main-container .btn-container{
+    grid-column: 1/2;;
+    padding-left: 10px;
+}
+.main-container .main{
+    grid-column: 2/11;
+}
+.main-container aside.btn-container{
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+.main-container .main .cards-container{
+    padding: 0 10px;
+}
+
+
+
+/* ========== start aside section ======================== */
+.btn {
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-background);
+    opacity: .5;
+    width: 120px;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    color: var(--subtitle);
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s;
+  }
+  .btn:hover {
+    opacity: .95;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+  }
+ 
+  .btn:hover .animation{
+    animation: ripple .9s linear infinite;
+  }
+  
+  .btn.active
+  {
+    opacity: .9;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-weight: 700;
+  }
+  
+  
+ 
+  
+  
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(93, 188, 252, 0.39), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(93, 188, 252, 0.322), 0 0 0 50px rgba(255, 255, 255, 0.1);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0);
+    }
+  }
+/* ========== end  aside section ======================== */
+
+
+/* ========== start main section ======================== */
+.main .card{
+    
+}
+.card img{
+    width: 100%;
+}
+/* ========== end  main section ======================== */
+
+@media (max-width: 813px){
+    
+    
+    .main-container .main .cards-container{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(1 ,1fr);
+        row-gap: 20px;
+    }
+    .main-container .main .cards-container .card{
+       grid-column-start: 1;
+       grid-column-end: -1;
+       width: 80%;
+    }
+    .btn {
+    
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--primary-background);
+        opacity: .5;
+        width: 95px;
+        font-weight: 400;
+        border-radius: 4px;
+        padding: 10px 0;
+        margin-left: 10px;
+        border: 1px solid transparent;
+        color: var(--subtitle);
+        font-size: 10px;
+        letter-spacing: 1.2px;
+        text-transform: capitalize;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all .5s;
+      }
+    
+}
+
+@media (min-width: 810px) {
+    
+    
+    
+    .main-container .main .cards-container{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2 ,1fr);
+        gap: 20px;
+    }
+   
+}
+@media (min-width: 900px) {
+    
+    
+    
+    .main-container .main .cards-container{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3 ,1fr);
+        gap: 10px;
+    }
+   
+}
+
