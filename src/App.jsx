@@ -1,30 +1,39 @@
-import { Fragment, useState } from 'react'
-import Header from './components/header/Header'
-import Hero from './components/hero/Hero'
-import MainContent from './components/maincont/MainContent'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
+import { Fragment } from "react";
+import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
+import MainContent from "./components/maincont/MainContent";
+import Contact from "./components/contact/Contact";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function App() {
- 
-
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 450) {
+        setShowScrollBtn(true);
+      } else {
+        setShowScrollBtn(false);
+      }
+    });
+  }, []);
+  const [showScrollBtn, setShowScrollBtn] = useState(false);
   return (
-    <Fragment >
-      <div className='container'>
+    <Fragment>
+      <div className="container" id="up">
         <Header />
-        
+
         <Hero />
-        <div className='divider'/>
+        <div className="divider" />
         <MainContent />
-        <div className='divider'/>
+        <div className="divider" />
         <Contact />
-        <div className='divider'/>
-        <Footer />
+        <div className="divider" />
+        <a href="#up">
+            <button style={{opacity: showScrollBtn ? 1 : 0}} className="scroll2Top icon-keyboard_arrow_up" />
+          </a>
       </div>
-     
     </Fragment>
-    
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,154 +1,81 @@
-import React from "react";
+import { useState } from "react";
 import "./mainCont.css";
+const myProjects = [
+  {projectTitle:'Flutter Project' , category:'flutter',imgPaht:'/public/5.jpg'},
+{projectTitle:'React Project' , category:'react',imgPaht:'/public/9.jpg'},
+{projectTitle:'HTML & CSS Project' , category:'html',imgPaht:'/public/4.jpg'},
+{projectTitle:'javaScript Project' , category:'js',imgPaht:'/public/8.jpg'},
+{projectTitle:'HTML & CSS Project' , category:'html',imgPaht:'/public/7.jpg'},
+{projectTitle:'HTML & CSS Project' , category:'html',imgPaht:'/public/1.jpg'},
+{projectTitle:'RjavaScript Project' , category:'js',imgPaht:'/public/6.jpg'},
+{projectTitle:'React Project' , category:'react',imgPaht:'/public/3.jpg'},];
+
 const MainContent = () => {
+  const [activeToggle, setActiveToggle] = useState("all");
+  const [arr , setArr]= useState(myProjects);
+  const handelrClick = (buttonCategory) => {
+    setActiveToggle(buttonCategory);
+    const newArr = myProjects.filter((el)=>{
+      return el.category === buttonCategory
+    });
+
+    setArr(newArr)};
+
   return (
     <section className="main-container">
       <aside className="btn-container flex ">
-        <button className="btn active">
+        <button
+          className={`btn ${activeToggle === "all" ? "active" : null} `}
+          onClick={() => {
+            setActiveToggle("all");
+            setArr(myProjects)
+          }}
+        >
           <i className="animation"></i>All Projects<i className="animation"></i>
         </button>
-        <button className="btn">
+        <button
+          className={`btn ${activeToggle === "html" ? "active" : null} `}
+          onClick={()=>{handelrClick('html')}}
+        >
           <i className="animation"></i>HTML & CSS<i className="animation"></i>
         </button>
-        <button className="btn">
+        <button className={`btn ${activeToggle === "js" ? "active" : null} `} onClick={()=>{handelrClick('js')}}>
           <i className="animation"></i>javaScript<i className="animation"></i>
         </button>
-        <button className="btn">
+        <button className={`btn ${activeToggle === "react" ? "active" : null} `} onClick={()=>{handelrClick('react')}}>
           <i className="animation"></i>react<i className="animation"></i>
         </button>
-        <button className="btn">
-          <i className="animation"></i>flluter<i className="animation"></i>
+        <button className={`btn ${activeToggle === "flutter" ? "active" : null} `} onClick={()=>{handelrClick('flutter')}}>
+          <i className="animation"></i>flutter<i className="animation"></i>
         </button>
       </aside>
 
       <div className=" main">
         <div className="cards-container">
-          <div className="card ">
-            <img src="/public/1.jpg" alt="" />
-            <div className="card-box ">
-              <h3 className="card-title">title</h3>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis aliquid debitis quisquam quis aspernatur porro rem
-                earum temporibus. Facilis tempore aliquam rerum, nobis .
-              </p>
-              <div className="card-icons flex">
-                <div className="icons flex">
-                  <span className="icon-link"></span>
-                  <span className="icon-github"></span>
-                </div>
+          {arr.map((item) => {
+            return (
+              <div className="card " key={item.imgPaht}>
+                <img src={item.imgPaht} alt="" />
+                <div className="card-box ">
+                  <h3 className="card-title">{item.projectTitle}</h3>
+                  <p className="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis aliquid debitis quisquam quis aspernatur.
+                  </p>
+                  <div className="card-icons flex">
+                    <div className="icons flex">
+                      <span className="icon-link"></span>
+                      <span className="icon-github"></span>
+                    </div>
 
-                <a className="link">
-                  more <span className="icon-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="card ">
-            <img src="/public/1.jpg" alt="" />
-            <div className="card-box ">
-              <h3 className="card-title">title</h3>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis aliquid debitis quisquam quis aspernatur porro rem
-                earum temporibus. Facilis tempore aliquam rerum, nobis .
-              </p>
-              <div className="card-icons flex">
-                <div className="icons flex">
-                  <span className="icon-link"></span>
-                  <span className="icon-github"></span>
+                    <a className="link">
+                      more <span className="icon-arrow-right" />
+                    </a>
+                  </div>
                 </div>
-
-                <a className="link">
-                  more <span className="icon-arrow-right" />
-                </a>
               </div>
-            </div>
-          </div>
-          <div className="card ">
-            <img src="/public/1.jpg" alt="" />
-            <div className="card-box ">
-              <h3 className="card-title">title</h3>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis aliquid debitis quisquam quis aspernatur porro rem
-                earum temporibus. Facilis tempore aliquam rerum, nobis .
-              </p>
-              <div className="card-icons flex">
-                <div className="icons flex">
-                  <span className="icon-link"></span>
-                  <span className="icon-github"></span>
-                </div>
-
-                <a className="link">
-                  more <span className="icon-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="card ">
-            <img src="/public/1.jpg" alt="" />
-            <div className="card-box ">
-              <h3 className="card-title">title</h3>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis aliquid debitis quisquam quis aspernatur porro rem
-                earum temporibus. Facilis tempore aliquam rerum, nobis .
-              </p>
-              <div className="card-icons flex">
-                <div className="icons flex">
-                  <span className="icon-link"></span>
-                  <span className="icon-github"></span>
-                </div>
-
-                <a className="link">
-                  more <span className="icon-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="card ">
-            <img src="/public/1.jpg" alt="" />
-            <div className="card-box ">
-              <h3 className="card-title">title</h3>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis aliquid debitis quisquam quis aspernatur porro rem
-                earum temporibus. Facilis tempore aliquam rerum, nobis .
-              </p>
-              <div className="card-icons flex">
-                <div className="icons flex">
-                  <span className="icon-link"></span>
-                  <span className="icon-github"></span>
-                </div>
-
-                <a className="link">
-                  more <span className="icon-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="card ">
-            <img src="/public/1.jpg" alt="" />
-            <div className="card-box ">
-              <h3 className="card-title">title</h3>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis aliquid debitis quisquam quis aspernatur porro rem
-                earum temporibus. Facilis tempore aliquam rerum, nobis .
-              </p>
-              <div className="card-icons flex">
-                <div className="icons flex">
-                  <span className="icon-link"></span>
-                  <span className="icon-github"></span>
-                </div>
-
-                <a className="link">
-                  more <span className="icon-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
