@@ -106,19 +106,20 @@ header .fixed ul.modal li:first-child{
 
 /* icons */
 
-header .icon-menu , header .icon-moon-o{
+header .icon-menu , header .icon-moon-o , header .icon-sun{
   color: var(--subtitle);
   justify-content: center;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   background-color: var(--primary-background);
   height: 2.4rem;
   width: 2.4rem;
   border-radius: 50%;
   border: 1px solid rgba(129, 110, 0, 0.582);
   transition: all .3s;
+  box-shadow: 1px 1px 10px  rgba(73, 73, 73, 0.377);
 }
-header .icon-menu:hover ,header .icon-moon-o:hover{
+header .icon-menu:hover ,header .icon-moon-o:hover , header .icon-sun:hover{
   border: 1px solid rgba(141, 120, 1, 0.781);
   color: rgb(255, 255, 255);
 }

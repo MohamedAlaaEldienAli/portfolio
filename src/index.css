@@ -16,6 +16,8 @@ button{
   --title:rgb(244 244 245);
   --subtitle: rgb(161 161 170);
   --blue: rgb(93 188 252);
+  --aside-button: #020308;
+  --aside-title:rgb(161 161 170);
 }
 .light{
   --primary-background : #efefef;
@@ -23,6 +25,8 @@ button{
   --boredr: rgba(63,63,70,0.5);
   --title:#020308;
   --subtitle: #0203086e;
+  --aside-button:rgb(39 39 42);
+  --aside-title:rgb(244 244 245);
 }
 
 html{
@@ -74,7 +78,7 @@ a{
   text-align: center;
   font-size: 1.5rem;
   transition: all .8s;
-  color: var(--title);
+  color: white;
 }
 
 

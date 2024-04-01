@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   padding:  0 20px;
+  column-gap:10px;
 
 }
 .main-container .btn-container {
@@ -25,16 +26,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--primary-background);
-  opacity: 0.5;
-  width: 120px;
+  background: var( --aside-button);
+  opacity: 0.8;
+  width: 100%;
   font-weight: 400;
   border-radius: 4px;
-  padding: 10px 0;
+  padding: 10px 6px;
   border: 1px solid transparent;
-  color: var(--subtitle);
+  color: var(--aside-title);
   font-size: 12px;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
   text-transform: capitalize;
   overflow: hidden;
   cursor: pointer;
@@ -252,6 +253,9 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 15 px;
     row-gap: 40px;
+  }
+  .card .card-box .card-title{
+    font-size: 1rem;
   }
   .card .card-box .card-text {
     font-size: 0.7rem;

@@ -84,4 +84,5 @@
 }
 .icon-sun:before {
   content: "\e9d4";
+  color: rgb(255, 209, 4);
 }
