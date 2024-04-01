@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="hero " id="about">
       <div className="left-sec ">
         <div >
-          <div className="parent-avatar border">
+          <div className="parent-avatar">
             <img src="/public/avatar-modified.png" alt="" className="avatar" />
             <span className="icon-verified"/>
           </div>
