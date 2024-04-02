@@ -5,42 +5,42 @@ const myProjects = [
   {
     projectTitle: "Flutter Project",
     category: "flutter",
-    imgPaht: "/public/5.jpg",
+    imgPaht: "images/5.jpg",
   },
   {
     projectTitle: "React Project",
     category: "react",
-    imgPaht: "/public/9.jpg",
+    imgPaht: "images/zz.jpg",
   },
   {
     projectTitle: "HTML & CSS Project",
     category: "html",
-    imgPaht: "/public/4.jpg",
+    imgPaht: "images/4.jpg",
   },
   {
     projectTitle: "javaScript Project",
     category: "js",
-    imgPaht: "/public/8.jpg",
+    imgPaht: "images/8.jpg",
   },
   {
     projectTitle: "HTML & CSS Project",
     category: "html",
-    imgPaht: "/public/7.jpg",
+    imgPaht: "images/7.jpg",
   },
   {
     projectTitle: "HTML & CSS Project",
     category: "html",
-    imgPaht: "/public/1.jpg",
+    imgPaht: "images/1.jpg",
   },
   {
     projectTitle: "RjavaScript Project",
     category: "js",
-    imgPaht: "/public/6.jpg",
+    imgPaht: "images/6.jpg",
   },
   {
     projectTitle: "React Project",
     category: "react",
-    imgPaht: "/public/3.jpg",
+    imgPaht: "images/3.jpg",
   },
 ];
 

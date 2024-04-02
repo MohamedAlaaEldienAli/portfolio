@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="left-sec ">
         <div >
           <div className="parent-avatar">
-            <img src="/public/avatar-modified.png" alt="" className="avatar" />
+            <img src="images/avatar-modified.png" alt="" className="avatar" />
             <span className="icon-verified"/>
           </div>
           <div className="avatar-desc">
